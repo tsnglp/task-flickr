@@ -5,7 +5,7 @@ export const Item = ({params}) =>{
         return link.name === "link"
       }).filter((image) => {
         return image.attributes.type === "image/jpeg"
-      })[0].attributes.href} style={{ width: "100px", height: "100px"}} alt="something"/><br/>
+      })[0].attributes.href} style={{ width: "100px", height: "100px"}} alt="no image"/><br/>
       
       Author: <strong>{params.children[8].children[0].value}</strong><br/>
       
