@@ -1,5 +1,4 @@
 {
-  "proxy": "https://salty-coast-83610.herokuapp.com/",
   "name": "task-flickr",
   "version": "0.1.0",
   "private": true,

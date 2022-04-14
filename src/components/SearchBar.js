@@ -7,7 +7,15 @@ export const SearchBar = () => {
   const [data, setData] = useState([])
   
   async function fetchData(tags) {
-    const results = await fetch(`https://www.flickr.com/services/feeds/photos_public.gne?tags=${tags}`)
+    const results = await fetch(
+      `https://www.flickr.com/services/feeds/photos_public.gne?tags=${tags}`,
+      {
+        headers: {
+          "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, HEAD, OPTIONS",
+          "Access-Control-Allow-Origin": "https://salty-coast-83610.herokuapp.com"
+        }
+      }
+      )
     .then( async resp => {
       const data = await resp.text();      
       return data;
